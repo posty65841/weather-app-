@@ -18,30 +18,32 @@
       
               <h3 class="mb-4 pb-2 fw-normal"> Choose a location </h3>
       
-              <div class="input-group rounded mb-3">
-                <input type="search" class="form-control rounded" placeholder="City" aria-label="Search"
-                  aria-describedby="search-addon" />
-                <a href="#!" type="button">
-                  <span class="input-group-text border-0 fw-bold" id="search-addon">
-                    Check!
-                  </span>
-                </a>
-              </div>
-      
+              
+              <form id="search-form">
+                <input id= "searchInput" type="text">
+                <button id="searchButton" type="submit" >check</button>
+              </form>
              
       
                 
       
               <div class="card shadow-0 border">
                 <div class="card-body p-4">
+                  <!-- need to remove hard code a hook in with js to format incoming data -->
       
-                  <h4 class="mb-1 sfw-normal">New York, US</h4>
-                  <p class="mb-2">Current temperature: <strong>5.42°C</strong></p>
-                  <p>Feels like: <strong>4.37°C</strong></p>
-                  <p>Max: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+                  <!-- <h4  id=" cityName"class="mb-1 sfw-normal"></h4> 
+                  <p id=" temp" class="mb-2">Current temperature: <strong></strong></p>
+                  <p id = "tempPos">"Feels like: <strong></strong></p>
+                  <p id=" maxMin">Max: <strong></strong>, Min: <strong></strong></p> -->
+
+                  <h4 id = "cityName"></h4>
+                  <p id = "temp">current temp:</p>
+                  <p id = "feelsLike">feels like: </p>
+                  <p id= "max">Max</p>
+                  <p id= "min">Min</p>
       
-                  <div class="d-flex flex-row align-items-center">
-                    <p class="mb-0 me-4">Scattered Clouds</p>
+                  <gitdiv class="d-flex flex-row align-items-center">
+                    <p class="mb-0 me-4"></p>
                     <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
                   </div>
       
@@ -53,7 +55,9 @@
       
         </div>
       </section>
+    
       <h1> 5-DAY Forcast </h1>
+      <div class = "d-flex justify-content-between"> 
       <div class="card col-2" style="width: 10rem;">
         
         <div class="card-body">
@@ -110,7 +114,7 @@
             Humidity:</p>
         </div>
       </div>
-
+    </div>
 
 
 
