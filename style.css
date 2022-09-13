@@ -1,12 +1,15 @@
 header{
     height: 100px;
     text-align: center;
-    background-color: rgb(5, 5, 5);
+    background-color: orange;
     color: white
     
 }
 h1{
     text-align: center;
-    background-color: black;
+    background-color: orange;
     color: white;
+}
+body{
+    background-color: black;
 }
