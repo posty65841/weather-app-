@@ -7,7 +7,7 @@ console.log(searchForm)
 
 function apiCallOne(userInput){
    
-    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}&units=imperial`
+    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`
     fetch(url)
     
     .then(function (response){
@@ -21,7 +21,7 @@ function apiCallOne(userInput){
         return {lat:cityData[0].lat, lon:cityData[0].lon};
     })
     .then (function(latLonData){
-        return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latLonData.lat}&lon=${latLonData.lon}&appid=${apiKey}`)
+        return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latLonData.lat}&lon=${latLonData.lon}&units=imperial&appid=${apiKey}`)
         .then(function(response){
             return response.json()
         })
@@ -50,13 +50,17 @@ function currentWeather (weatherData){
     let tempPos = document.querySelector("#feelsLike")
     let max = document.querySelector("#max")
     let min = document.querySelector("#min")
+    let windSpeed = document.querySelector("#windSpeed")
     cityName.textContent = weatherData.city.name
     temp.textContent = weatherData.list[0].main.temp
     tempPos.textContent = weatherData.list[0].main.feels_like
     max.textContent = weatherData.list[0].main.temp_max
     min.textContent = weatherData.list[0].main.temp_min
+    windSpeed.textContent = weatherData.list[0].wind.speed
 
 }
+
+
 
 
 
