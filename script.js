@@ -7,7 +7,7 @@ console.log(searchForm)
 
 function apiCallOne(userInput){
    
-    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`
+    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}&units=imperial`
     fetch(url)
     
     .then(function (response){
@@ -55,13 +55,6 @@ function currentWeather (weatherData){
     tempPos.textContent = weatherData.list[0].main.feels_like
     max.textContent = weatherData.list[0].main.temp_max
     min.textContent = weatherData.list[0].main.temp_min
-
-
-    
-
-
-    
-
 
 }
 
