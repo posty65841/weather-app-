@@ -51,20 +51,52 @@ function currentWeather (weatherData){
     let max = document.querySelector("#max")
     let min = document.querySelector("#min")
     let windSpeed = document.querySelector("#windSpeed")
+    let date = document.querySelector("#date")
     cityName.textContent = weatherData.city.name
     temp.textContent = weatherData.list[0].main.temp
     tempPos.textContent = weatherData.list[0].main.feels_like
     max.textContent = weatherData.list[0].main.temp_max
     min.textContent = weatherData.list[0].main.temp_min
     windSpeed.textContent = weatherData.list[0].wind.speed
+    date.textContent = weatherData.list[1].dt_txt
 
 
 
     let TEMP1 = document.getElementById("TEMP1")
     TEMP1.textContent = "TEMP:" + weatherData.list[8].main.temp
     let wind1 = document.getElementById("wind1")
-    wind1.textContent = "wind" + weatherData.list[8].main.wind.speed
+    wind1.textContent = "wind:" + weatherData.list[8].wind.speed
+    let humidity1 = document.getElementById("humidity1")
+    humidity1.textContent = "humidity:" + weatherData.list[8].main.humidity
 
+    let TEMP2 = document.getElementById("TEMP2")
+    TEMP2.textContent = "TEMP:" + weatherData.list[16].main.temp
+    let wind2 = document.getElementById("wind2")
+    wind2.textContent = "wind:" + weatherData.list[16].wind.speed
+    let humidity2 = document.getElementById("humidity2")
+    humidity2.textContent = "humidity:" + weatherData.list[16].main.humidity
+
+
+    let TEMP3 = document.getElementById("TEMP3")
+    TEMP3.textContent = "TEMP:" + weatherData.list[24].main.temp
+    let wind3 = document.getElementById("wind3")
+    wind3.textContent = "wind:" + weatherData.list[24].wind.speed
+    let humidity3 = document.getElementById("humidity3")
+    humidity3.textContent = "humidity:" + weatherData.list[24].main.humidity
+
+    let TEMP4 = document.getElementById("TEMP4")
+    TEMP4.textContent = "TEMP:" + weatherData.list[32].main.temp
+    let wind4 = document.getElementById("wind4")
+    wind4.textContent = "wind:" + weatherData.list[32].wind.speed
+    let humidity4 = document.getElementById("humidity4")
+    humidity4.textContent = "humidity:" + weatherData.list[32].main.humidity
+
+    let TEMP5 = document.getElementById("TEMP5")
+    TEMP5.textContent = "TEMP:" + weatherData.list[39].main.temp
+    let wind5 = document.getElementById("wind5")
+    wind5.textContent = "wind:" + weatherData.list[39].wind.speed
+    let humidity5 = document.getElementById("humidity5")
+    humidity5.textContent = "humidity:" + weatherData.list[39].main.humidity
 }
 
 
