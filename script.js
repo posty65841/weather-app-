@@ -58,7 +58,16 @@ function currentWeather (weatherData){
     min.textContent = weatherData.list[0].main.temp_min
     windSpeed.textContent = weatherData.list[0].wind.speed
 
+
+
+    let TEMP1 = document.getElementById("TEMP1")
+    TEMP1.textContent = "TEMP:" + weatherData.list[8].main.temp
+    let wind1 = document.getElementById("wind1")
+    wind1.textContent = "wind" + weatherData.list[8].main.wind.speed
+
 }
+
+
 
 
 
