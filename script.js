@@ -61,10 +61,11 @@ function currentWeather (weatherData){
     windSpeed.textContent = weatherData.list[0].wind.speed
     date.textContent = weatherData.list[1].dt_txt
     console.log()
-    iconEl.textContent = weatherData.list[0].weather[0].icon
+    iconEl.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
 
 
-
+    let iconEl1 = document.querySelector("#icon1")
+    iconEl1.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
     let TEMP1 = document.getElementById("TEMP1")
     TEMP1.textContent = "TEMP:" + weatherData.list[8].main.temp
     let wind1 = document.getElementById("wind1")
@@ -72,6 +73,8 @@ function currentWeather (weatherData){
     let humidity1 = document.getElementById("humidity1")
     humidity1.textContent = "humidity:" + weatherData.list[8].main.humidity
 
+    let iconEl2 = document.querySelector("#icon2")
+    iconEl2.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
     let TEMP2 = document.getElementById("TEMP2")
     TEMP2.textContent = "TEMP:" + weatherData.list[16].main.temp
     let wind2 = document.getElementById("wind2")
@@ -79,7 +82,8 @@ function currentWeather (weatherData){
     let humidity2 = document.getElementById("humidity2")
     humidity2.textContent = "humidity:" + weatherData.list[16].main.humidity
 
-
+    let iconEl3 = document.querySelector("#icon3")
+    iconEl3.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
     let TEMP3 = document.getElementById("TEMP3")
     TEMP3.textContent = "TEMP:" + weatherData.list[24].main.temp
     let wind3 = document.getElementById("wind3")
@@ -87,6 +91,8 @@ function currentWeather (weatherData){
     let humidity3 = document.getElementById("humidity3")
     humidity3.textContent = "humidity:" + weatherData.list[24].main.humidity
 
+    let iconEl4 = document.querySelector("#icon4")
+    iconEl4.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
     let TEMP4 = document.getElementById("TEMP4")
     TEMP4.textContent = "TEMP:" + weatherData.list[32].main.temp
     let wind4 = document.getElementById("wind4")
@@ -94,6 +100,8 @@ function currentWeather (weatherData){
     let humidity4 = document.getElementById("humidity4")
     humidity4.textContent = "humidity:" + weatherData.list[32].main.humidity
 
+    let iconEl5 = document.querySelector("#icon5")
+    iconEl5.src ="https://openweathermap.org/img/w/"+ weatherData.list[0].weather[0].icon + ".png"
     let TEMP5 = document.getElementById("TEMP5")
     TEMP5.textContent = "TEMP:" + weatherData.list[39].main.temp
     let wind5 = document.getElementById("wind5")
