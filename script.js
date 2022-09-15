@@ -8,7 +8,9 @@ console.log(searchForm)
 function apiCallOne(userInput){
    
     let url = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`
+    console.log(url)
     fetch(url)
+
     
     .then(function (response){
         return response.json()
